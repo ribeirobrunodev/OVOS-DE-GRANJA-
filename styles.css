@@ -14,25 +14,28 @@ body {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
   .coluna-texto {
     background-color: #fff7cd;
+    text-align: center;
   }
   
   .coluna-texto h1 {
     font-weight: bold;
     font-size: 24px;
-    color: #1a1a1a;
   }
   
   .coluna-texto p {
     font-size: 18px;
-    margin-top: 10px;
   }
   
   button {
-    margin: 10px 5px 0 0;
+    margin: 10px;
     padding: 10px 15px;
     background-color: #ffb703;
     border: none;
@@ -46,8 +49,51 @@ body {
     color: white;
   }
   
-  .qr-code, .imagem-pintinho {
-    max-width: 100%;
+  .qr-code {
+    max-width: 200px;
     height: auto;
+  }
+  
+  .imagem-pintinho {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  /* Pintinho Atirador */
+  .pintinho-atirador {
+    position: relative;
+    margin-top: 30px;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  .pintinho-base {
+    width: 80px;
+  }
+  
+  .bomba {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #1f2937;
+    border-radius: 50%;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: subir 1s linear forwards;
+  }
+  
+  @keyframes subir {
+    0% {
+      bottom: 80px;
+      opacity: 1;
+    }
+    100% {
+      bottom: 150px;
+      opacity: 0;
+    }
   }
   
